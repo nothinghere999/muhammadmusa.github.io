@@ -5,67 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Musa | Portfolio</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f8f9fa;
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #212529;
-      color: white;
-      padding: 2rem 0;
-    }
-    h1 { margin: 0; }
-    section {
-      padding: 2rem;
-    }
-    footer {
-      background: #212529;
-      color: white;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    /* --- Reset & Base --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+
+    /* --- Header --- */
+    header { background: #212529; color: white; padding: 6rem 2rem 4rem; text-align: center; }
+    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; }
+
+    /* --- Section Titles --- */
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: #212529; text-align: center; }
+
+    /* --- About --- */
+    #about p { text-align: center; max-width: 700px; margin: auto; }
+
+    /* --- Skills --- */
+    #skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .skill { background: white; padding: 1rem 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+    /* --- Projects --- */
+    #projects { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .project-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 300px; }
+    .project-card h3 { margin-bottom: 0.5rem; }
+    .project-card p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+
+    /* --- Education --- */
+    #education ul { list-style: none; text-align: center; }
+    #education li { margin-bottom: 1rem; }
+
+    /* --- Contact --- */
+    #contact p { text-align: center; margin-bottom: 0.5rem; }
+    #contact a { margin: 0 0.5rem; }
+
+    /* --- Footer --- */
+    footer { background: #212529; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      #projects, #skills { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Muhammad Musa</h1>
     <p>Computer Engineer | MS in Computer Science</p>
   </header>
 
-  <section>
+  <!-- About Me -->
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I’m Musa — a passionate computer engineer currently pursuing my Master’s in Computer Science. 
-       I enjoy building intelligent systems, working with data, and exploring cybersecurity & blockchain.</p>
+    <p>
+      Hi, I’m Muhammad Musa, a passionate computer engineer pursuing my Master’s in Computer Science.
+      I enjoy building intelligent systems, exploring cybersecurity, blockchain, and developing scalable software solutions.
+    </p>
   </section>
 
-  <section>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">C++</div>
+    <div class="skill">Python</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">Blockchain</div>
+    <div class="skill">Cryptography</div>
+    <div class="skill">Data Analysis</div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
     <h2>Projects</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li><strong>BigInteger Arbitrary Precision Library (C++)</strong> – implemented modular arithmetic & power_mod.</li>
-      <li><strong>Blockchain Fork Project</strong> – customized Ethereum Proof of Authority network.</li>
+    <div class="project-card">
+      <h3>BigInteger Library (C++)</h3>
+      <p>Implemented arbitrary precision arithmetic, modular exponentiation, and operator overloading.</p>
+      <a href="https://github.com/muhammadmusa/BigInteger" target="_blank">GitHub Link</a>
+    </div>
+    <div class="project-card">
+      <h3>Ethereum PoA Fork</h3>
+      <p>Customized Ethereum Proof of Authority blockchain for private network experiments.</p>
+      <a href="https://github.com/muhammadmusa/Ethereum-PoA-Fork" target="_blank">GitHub Link</a>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>BSc in Computer Engineering – [Your University], Pakistan</li>
+      <li>MS in Computer Science – University of Louisville (in progress)</li>
     </ul>
   </section>
 
-  <section>
+  <!-- Contact / Resume -->
+  <section id="contact">
     <h2>Contact</h2>
     <p>📧 <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
-    <p>🔗 <a href="https://github.com/yourusername">GitHub</a> | 
-       <a href="https://linkedin.com/in/yourusername">LinkedIn</a></p>
+    <p>
+      🔗 <a href="https://github.com/muhammadmusa" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/in/muhammadmusa" target="_blank">LinkedIn</a> |
+      <a href="resume.pdf" target="_blank">Download Resume</a>
+    </p>
   </section>
 
+  <!-- Footer -->
   <footer>
     © 2025 Muhammad Musa
   </footer>
+
 </body>
 </html>
