@@ -7,3 +7,42 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
+
+
+<header class="header">
+  <img src="profile.jpg" alt="Muhammad Musa" class="top-left-photo">
+  <nav class="nav">
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #0077b6;
+}
+
+.top-left-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* circular photo */
+  object-fit: cover;
+  border: 2px solid #caf0f8;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #caf0f8;
+}
